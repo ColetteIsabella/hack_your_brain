@@ -1,0 +1,12 @@
+<h1>Welcome to Hack Your Brain!</h1>
+<h3>A tool for techies, and anyone involved with STEM to learn, commiserate and get healthy.</h3>
+
+<% if current_user.present? %>
+  <h3> Welcome <%= current_user.user_name %>!</h3>
+  <h3><%= link_to "Sign Out", logout_path %></h3>
+<% else %>
+  <h3><%= link_to "Register", new_user_path %></h3><br>
+  <h3><%= link_to "Sign In", login_path %></h3><br>
+<% end %>
+  <h3><%= link_to "Let's get started!", resources_path %></h3>
+</div>
