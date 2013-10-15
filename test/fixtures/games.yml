@@ -1,0 +1,18 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  day: MyString
+  week: MyString
+  month: MyString
+  day_struggle: MyString
+  com_struggle: MyString
+  some_struggle: MyString
+
+two:
+  day: MyString
+  week: MyString
+  month: MyString
+  day_struggle: MyString
+  com_struggle: MyString
+  some_struggle: MyString

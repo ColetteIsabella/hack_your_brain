@@ -8,6 +8,8 @@ BrainHack::Application.routes.draw do
   resources :resources
   resources :games
 
+  get "/start", to: "games#start"
+
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   # The priority is based upon order of creation: first created -> highest priority.
