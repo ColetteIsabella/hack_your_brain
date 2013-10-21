@@ -4,9 +4,9 @@ class CreateGames < ActiveRecord::Migration
       t.string :day
       t.string :week
       t.string :month
-      t.string :day_struggle
-      t.string :com_struggle
-      t.string :some_struggle
+      t.string :day_battle
+      t.string :com_battle
+      t.string :rare_battle
 
       t.timestamps
     end

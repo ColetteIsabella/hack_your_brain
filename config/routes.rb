@@ -1,13 +1,13 @@
 BrainHack::Application.routes.draw do
 
-  get "games/index"
-  get "resources/index"
+
   root to: "welcome#index"
   resources :users, only:[:new, :create]
   resources :sessions, only:[:create]
   resources :resources
   resources :games
 
+  get "/thought", to: "games#thought"
   get "/start", to: "games#start"
 
   get "/login", to: "sessions#new"

@@ -1,31 +1,128 @@
-<%= form_for Games_path do |f| %>
+<%= form_for games_path do |f| %>
+
+<h2>What do you want to accomplish:</h2>
 
 <div>
-  <%= f.label :day %><br>
+  <%= f.label :day, "Day to day" %>
   <%= f.text_field :day %>
 </div>
-
+<p></p>
 <div>
-  <%= f.label :week %><br>
+  <%= f.label :week, "By the end of this week" %>
   <%= f.text_field :week %>
 </div>
-
+<p></p>
 <div>
-  <%= f.label :month %><br>
+  <%= f.label :month, "By the end of this month." %>
   <%= f.text_field :month %>
 </div>
 
-<div>
-  <%= f.label :day_struggle %><br>
-  <%= f.text_field :day_struggle %>
-</div>
 
-<div>
-  <%= f.label :com_struggle %><br>
-  <%= f.text_field :com_struggle %>
-</div>
+<h2>What are your greatest struggles?</h2>
 
-<div>
-  <%= f.label :some_struggle %><br>
-  <%= f.text_field :some_struggle %>
-</div>
+  <h3><%= f.label :day_battle, "One or more times a day" %></h3><br>
+  <% 1.times do |a| %>
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Procrastination" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Over Sleeping" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Under Sleeping" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Over Eating" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Under Eating" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Avoiding Breaks" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Alcohol in excess" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Other inebriants for escapism rather than enjoyment" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Self Doubt" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Avoiding exercise" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Taking on too much" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Avoiding intimacy" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Avoiding friendships" %><br >
+  <%= check_box_tag :day_battle %>
+  <%= label_tag a, "Other" %><br >
+  <%= label_tag :day_battle, "Describe:" %>
+  <%= text_field_tag :day_battle %>
+
+  <% end %>
+<p></p>
+ <h3><%= f.label :com_battle, "One or more times a week" %></h3><br>
+  <% 1.times do |b| %>
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Procrastination" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Over Sleeping" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Under Sleeping" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Over Eating" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Under Eating" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Avoiding Breaks" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Alcohol in excess" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Other inebriants for escapism rather than enjoyment" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Self Doubt" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Avoiding exercise" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Taking on too much" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Avoiding intimacy" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Avoiding friendships" %><br >
+  <%= check_box_tag :com_battle %>
+  <%= label_tag b, "Other" %><br >
+  <%= label_tag :com_battle, "Describe:" %>
+  <%= text_field_tag :com_battle %>
+  <% end %>
+
+<p></p>
+ <h3><%= f.label :rare_battle, "Sometimes" %></h3><br>
+  <% 1.times do |c| %>
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Procrastination" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Over Sleeping" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Under Sleeping" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Over Eating" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Under Eating" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Avoiding Breaks" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Alcohol in excess" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Other inebriants for escapism rather than enjoyment" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Self Doubt" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Avoiding exercise" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Taking on too much" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Avoiding intimacy" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Avoiding friendships" %><br >
+  <%= check_box_tag :rare_battle %>
+  <%= label_tag c, "Other" %><br >
+  <%= label_tag :rare_battle, "Describe:" %>
+  <%= text_field_tag :rare_battle %>
+  <% end %><br >
+
+<%= f.submit "Save" %>
+<% end %>
