@@ -1,14 +1,16 @@
 BrainHack::Application.routes.draw do
 
-
   root to: "welcome#index"
   resources :users, only:[:new, :create]
   resources :sessions, only:[:create]
   resources :resources
   resources :games
+  resources :levels
 
   get "/thought", to: "games#thought"
   get "/start", to: "games#start"
+
+  post "/start", to: "levels#start"
 
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"

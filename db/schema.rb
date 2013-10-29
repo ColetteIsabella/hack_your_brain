@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021172201) do
+ActiveRecord::Schema.define(version: 20131029175131) do
 
+  create_table "battles", force: true do |t|
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "games", force: true do |t|
+    t.string   "day"
+    t.string   "week"
+    t.string   "month"
+    t.string   "day_battle"
+    t.string   "com_battle"
+    t.string   "rare_battle"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "levels", force: true do |t|
     t.string   "day"
     t.string   "week"
     t.string   "month"
