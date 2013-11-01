@@ -11,6 +11,7 @@ BrainHack::Application.routes.draw do
   get "/start", to: "games#start"
 
   post "/start", to: "levels#start"
+  post "thought", to: "levels#thought"
 
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"

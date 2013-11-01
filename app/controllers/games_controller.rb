@@ -1,27 +1,37 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @levels = Level.all
   end
 
   def start
+    @level = Level.new(params[:game])
+    if @level.save
+      flash[:notice] = "Let's set your difficulty level."
     if params["send_to_levels_start"]
-   send_to_levels_start
+      send_to_levels_start
+      flash[:notice] = "Let's set your difficulty level."
+    end
   end
 end
 
+  def create
+  end
 
 
   def thought
+    if params["send_to_levels_thought"]
+   send_to_levels_thought
   end
-
+end
 
 private
 
-def games_params
-  params.require(:game).permit(:day, :week, :month,
+  def game_params
+    params.require(:game).permit(:day, :week, :month,
     :day_battle, :com_battle, :rare_battle,
     level_attribtues:[:day, :week, :month, :day_battle, :com_battle,
-       :rare_battle])
+    :rare_battle])
   end
 end
+
 

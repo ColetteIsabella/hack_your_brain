@@ -5,6 +5,7 @@ class LevelsController < ApplicationController
 
   def start
     @levels = Level.all
+
   end
 
   def thought

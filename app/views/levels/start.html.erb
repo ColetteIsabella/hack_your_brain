@@ -1,18 +1,30 @@
 <h1>Rate each of your choices:</h1>
-<%= render "/start" %>
-<table>
-  <thead>
-    <tr>
-      <th><strong>How hard is your daily acheivement goal? </strong></th>
-    </tr>
-  </thead>
+<% render "games/form" %>
 
-  <tbody>
-<% @levels.each do |game| %>
-<tr>
-<td><%= game.day %></td>
-<button type="easy">Easy</button>
-<button type="medium">Medium</button>
-<button type="hard">Hard</button>
-</tr>
-<% end %>
+
+  <strong>How hard is your daily acheivement goal? </strong><br />
+    <h3><%= game.day %></h3>
+    <button type="easy">Easy</button>
+    <button type="medium">Medium</button>
+    <button type="hard">Hard</button><br />
+    <p> </p>
+    <p> </p>
+
+<strong>How hard is your weekly acheivement goal? </strong><br />
+
+    <button type="easy">Easy</button>
+    <button type="medium">Medium</button>
+    <button type="hard">Hard</button><br />
+    <p> </p>
+    <p> </p>
+
+ <strong>How hard is your ultimate acheivement goal? </strong><br />
+
+    <button type="easy">Easy</button>
+    <button type="medium">Medium</button>
+    <button type="hard">Hard</button><br />
+
+
+
+
+<%= link_to "Back", start_path %>
