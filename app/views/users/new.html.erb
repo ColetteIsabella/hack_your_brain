@@ -1,3 +1,4 @@
+<h1>Create your Profile</h1>
 <%= form_for @user do |f| %>
   <div>
     <%= f.label :user_name %>
@@ -16,4 +17,5 @@
   </div>
 
   <%= f.submit %>
+  <%= link_to profile_path %>
   <% end %>

@@ -1,15 +1,14 @@
 class GamesController < ApplicationController
   def index
     @levels = Level.all
-  end
+ end
 
   def start
-    @level = Level.new(params[:game])
+    @level = Level.new(params[:level])
     if @level.save
       flash[:notice] = "Let's set your difficulty level."
     if params["send_to_levels_start"]
       send_to_levels_start
-      flash[:notice] = "Let's set your difficulty level."
     end
   end
 end

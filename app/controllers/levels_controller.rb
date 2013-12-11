@@ -1,11 +1,13 @@
 class LevelsController < ApplicationController
   def index
-
+    @levels = Level.all
   end
 
   def start
-    @levels = Level.all
-
+    @level = Level.new(params[:level])
+      if @level.save
+        flash[:notice] = "Let's set your difficulty level."
+    end
   end
 
   def thought

@@ -1,4 +1,4 @@
-<h1>Your Profile</h1>
+<h1>Log into your Profile</h1>
 <%= form_tag sessions_path do %>
 
   <div>
@@ -12,4 +12,6 @@
   </div>
 
   <%= submit_tag "Log in" %>
+
   <% end %>
+<%= link_to "profile", profile_path %>
